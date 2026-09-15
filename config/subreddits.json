@@ -1,0 +1,14 @@
+[
+  {
+    "name": "technology",
+    "cadence": "daily",
+    "limit": 1,
+    "note": "placeholder entry — replace with real subreddits once the list is confirmed"
+  },
+  {
+    "name": "dataisbeautiful",
+    "cadence": "weekly",
+    "limit": 1,
+    "note": "placeholder entry — replace with real subreddits once the list is confirmed"
+  }
+]
