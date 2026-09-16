@@ -8,10 +8,5 @@
     "name": "dataisbeautiful",
     "cadence": "weekly",
     "limit": 1
-  },
-  {
-    "name": "test_sync_row",
-    "cadence": "weekly",
-    "limit": 1
   }
 ]
