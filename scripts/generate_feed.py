@@ -35,7 +35,7 @@ MEDIA_NS = "http://search.yahoo.com/mrss/"
 USER_AGENT = "reddit-digest/1.0 (personal single-user RSS aggregator; not for scraping at scale)"
 REQUEST_DELAY_SECONDS = 3
 # TODO: fill in the real GitHub Pages URL once the repo is created and Pages is enabled.
-FEED_URL = "https://REPLACE-ME.github.io/reddit-digest/feed.xml"
+FEED_URL = "https://cyberwildcard.github.io/reddit-digest/feed.xml"
 
 CADENCE_TO_TIMEFRAME = {"daily": "day", "weekly": "week"}
 
