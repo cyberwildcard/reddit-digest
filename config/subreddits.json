@@ -1,11 +1,611 @@
 [
   {
-    "name": "technology",
+    "name": "AI_Agents",
     "cadence": "daily",
     "limit": 1
   },
   {
+    "name": "ArtificialIntelligence",
+    "cadence": "daily",
+    "limit": 1
+  },
+  {
+    "name": "ChatGPT",
+    "cadence": "daily",
+    "limit": 1
+  },
+  {
+    "name": "ClaudeAI",
+    "cadence": "daily",
+    "limit": 1
+  },
+  {
+    "name": "ClaudeCode",
+    "cadence": "daily",
+    "limit": 1
+  },
+  {
+    "name": "ClaudeCowork",
+    "cadence": "daily",
+    "limit": 1
+  },
+  {
+    "name": "Darkfuturology",
+    "cadence": "daily",
+    "limit": 1
+  },
+  {
+    "name": "LocalLaMA",
+    "cadence": "daily",
+    "limit": 1
+  },
+  {
+    "name": "OpenWebUI",
+    "cadence": "daily",
+    "limit": 1
+  },
+  {
+    "name": "PromptEngineering",
+    "cadence": "daily",
+    "limit": 1
+  },
+  {
+    "name": "PromptPorn",
+    "cadence": "daily",
+    "limit": 1
+  },
+  {
+    "name": "StableDiffusion",
+    "cadence": "daily",
+    "limit": 1
+  },
+  {
+    "name": "aiagents",
+    "cadence": "daily",
+    "limit": 1
+  },
+  {
+    "name": "aipromptprogramming",
+    "cadence": "daily",
+    "limit": 1
+  },
+  {
+    "name": "clawdbot",
+    "cadence": "daily",
+    "limit": 1
+  },
+  {
+    "name": "n8n_ai_agents",
+    "cadence": "daily",
+    "limit": 1
+  },
+  {
+    "name": "notebooklm",
+    "cadence": "daily",
+    "limit": 1
+  },
+  {
+    "name": "perplexity_ai",
+    "cadence": "daily",
+    "limit": 1
+  },
+  {
+    "name": "promptingmagic",
+    "cadence": "daily",
+    "limit": 1
+  },
+  {
+    "name": "singularity",
+    "cadence": "daily",
+    "limit": 1
+  },
+  {
+    "name": "vibecoding",
+    "cadence": "daily",
+    "limit": 1
+  },
+  {
+    "name": "data",
+    "cadence": "weekly",
+    "limit": 1
+  },
+  {
+    "name": "DataHoarder",
+    "cadence": "weekly",
+    "limit": 1
+  },
+  {
+    "name": "bigdata",
+    "cadence": "weekly",
+    "limit": 1
+  },
+  {
+    "name": "Annas_Archive",
+    "cadence": "weekly",
+    "limit": 1
+  },
+  {
+    "name": "dataanalysis",
+    "cadence": "weekly",
+    "limit": 1
+  },
+  {
     "name": "dataisbeautiful",
+    "cadence": "weekly",
+    "limit": 1
+  },
+  {
+    "name": "datascience",
+    "cadence": "weekly",
+    "limit": 1
+  },
+  {
+    "name": "datascienceproject",
+    "cadence": "weekly",
+    "limit": 1
+  },
+  {
+    "name": "datasets",
+    "cadence": "weekly",
+    "limit": 1
+  },
+  {
+    "name": "elastic",
+    "cadence": "weekly",
+    "limit": 1
+  },
+  {
+    "name": "opendata",
+    "cadence": "weekly",
+    "limit": 1
+  },
+  {
+    "name": "sqlite",
+    "cadence": "weekly",
+    "limit": 1
+  },
+  {
+    "name": "statistics",
+    "cadence": "weekly",
+    "limit": 1
+  },
+  {
+    "name": "visualization",
+    "cadence": "weekly",
+    "limit": 1
+  },
+  {
+    "name": "Parenting",
+    "cadence": "daily",
+    "limit": 1
+  },
+  {
+    "name": "SingleDads",
+    "cadence": "daily",
+    "limit": 1
+  },
+  {
+    "name": "daddit",
+    "cadence": "daily",
+    "limit": 1
+  },
+  {
+    "name": "parentingteenagers",
+    "cadence": "daily",
+    "limit": 1
+  },
+  {
+    "name": "SteamDeck",
+    "cadence": "daily",
+    "limit": 1
+  },
+  {
+    "name": "gaming",
+    "cadence": "daily",
+    "limit": 1
+  },
+  {
+    "name": "linux_gaming",
+    "cadence": "daily",
+    "limit": 1
+  },
+  {
+    "name": "visualnovels",
+    "cadence": "daily",
+    "limit": 1
+  },
+  {
+    "name": "DecidingToBeBetter",
+    "cadence": "daily",
+    "limit": 1
+  },
+  {
+    "name": "Fitness",
+    "cadence": "daily",
+    "limit": 1
+  },
+  {
+    "name": "GetMotivated",
+    "cadence": "daily",
+    "limit": 1
+  },
+  {
+    "name": "NonZeroDay",
+    "cadence": "daily",
+    "limit": 1
+  },
+  {
+    "name": "ObsidianMD",
+    "cadence": "daily",
+    "limit": 1
+  },
+  {
+    "name": "PKMS",
+    "cadence": "daily",
+    "limit": 1
+  },
+  {
+    "name": "Selfhelpbooks",
+    "cadence": "daily",
+    "limit": 1
+  },
+  {
+    "name": "Stoicism",
+    "cadence": "daily",
+    "limit": 1
+  },
+  {
+    "name": "books",
+    "cadence": "daily",
+    "limit": 1
+  },
+  {
+    "name": "booksuggestions",
+    "cadence": "daily",
+    "limit": 1
+  },
+  {
+    "name": "getdisciplined",
+    "cadence": "daily",
+    "limit": 1
+  },
+  {
+    "name": "shortstories",
+    "cadence": "daily",
+    "limit": 1
+  },
+  {
+    "name": "yoga",
+    "cadence": "daily",
+    "limit": 1
+  },
+  {
+    "name": "BitWarden",
+    "cadence": "weekly",
+    "limit": 1
+  },
+  {
+    "name": "Daylio",
+    "cadence": "weekly",
+    "limit": 1
+  },
+  {
+    "name": "OpenAI",
+    "cadence": "weekly",
+    "limit": 1
+  },
+  {
+    "name": "aiArt",
+    "cadence": "weekly",
+    "limit": 1
+  },
+  {
+    "name": "blackhat",
+    "cadence": "weekly",
+    "limit": 1
+  },
+  {
+    "name": "coolguides",
+    "cadence": "weekly",
+    "limit": 1
+  },
+  {
+    "name": "docker",
+    "cadence": "weekly",
+    "limit": 1
+  },
+  {
+    "name": "homelab",
+    "cadence": "weekly",
+    "limit": 1
+  },
+  {
+    "name": "macmini",
+    "cadence": "weekly",
+    "limit": 1
+  },
+  {
+    "name": "midjourney",
+    "cadence": "weekly",
+    "limit": 1
+  },
+  {
+    "name": "n8n",
+    "cadence": "weekly",
+    "limit": 1
+  },
+  {
+    "name": "pihole",
+    "cadence": "weekly",
+    "limit": 1
+  },
+  {
+    "name": "raindropio",
+    "cadence": "weekly",
+    "limit": 1
+  },
+  {
+    "name": "selfhosted",
+    "cadence": "weekly",
+    "limit": 1
+  },
+  {
+    "name": "webscraping",
+    "cadence": "weekly",
+    "limit": 1
+  },
+  {
+    "name": "80smusic",
+    "cadence": "daily",
+    "limit": 1
+  },
+  {
+    "name": "Lostwave",
+    "cadence": "daily",
+    "limit": 1
+  },
+  {
+    "name": "Metallica",
+    "cadence": "daily",
+    "limit": 1
+  },
+  {
+    "name": "Techno",
+    "cadence": "daily",
+    "limit": 1
+  },
+  {
+    "name": "Darkwave",
+    "cadence": "daily",
+    "limit": 1
+  },
+  {
+    "name": "newwave",
+    "cadence": "daily",
+    "limit": 1
+  },
+  {
+    "name": "postpunk",
+    "cadence": "daily",
+    "limit": 1
+  },
+  {
+    "name": "trance",
+    "cadence": "daily",
+    "limit": 1
+  },
+  {
+    "name": "AIIncomeLab",
+    "cadence": "daily",
+    "limit": 1
+  },
+  {
+    "name": "AksmenOver30",
+    "cadence": "daily",
+    "limit": 1
+  },
+  {
+    "name": "Askmenover40",
+    "cadence": "daily",
+    "limit": 1
+  },
+  {
+    "name": "BEFreelance",
+    "cadence": "daily",
+    "limit": 1
+  },
+  {
+    "name": "BESalary",
+    "cadence": "daily",
+    "limit": 1
+  },
+  {
+    "name": "Business_ideas",
+    "cadence": "daily",
+    "limit": 1
+  },
+  {
+    "name": "Entrepeneurs",
+    "cadence": "daily",
+    "limit": 1
+  },
+  {
+    "name": "HonestSideHustles",
+    "cadence": "daily",
+    "limit": 1
+  },
+  {
+    "name": "aisolobusinesses",
+    "cadence": "daily",
+    "limit": 1
+  },
+  {
+    "name": "automation",
+    "cadence": "daily",
+    "limit": 1
+  },
+  {
+    "name": "malelifestyle",
+    "cadence": "daily",
+    "limit": 1
+  },
+  {
+    "name": "passive_income",
+    "cadence": "daily",
+    "limit": 1
+  },
+  {
+    "name": "selfimprovement",
+    "cadence": "daily",
+    "limit": 1
+  },
+  {
+    "name": "Ask_politics",
+    "cadence": "daily",
+    "limit": 1
+  },
+  {
+    "name": "Belgium2",
+    "cadence": "daily",
+    "limit": 1
+  },
+  {
+    "name": "EUnews",
+    "cadence": "daily",
+    "limit": 1
+  },
+  {
+    "name": "GlobalTalk",
+    "cadence": "daily",
+    "limit": 1
+  },
+  {
+    "name": "NeutralPolitics",
+    "cadence": "daily",
+    "limit": 1
+  },
+  {
+    "name": "PoliticalDiscussion",
+    "cadence": "daily",
+    "limit": 1
+  },
+  {
+    "name": "RussiaUkraineWar2022",
+    "cadence": "daily",
+    "limit": 1
+  },
+  {
+    "name": "geopolitics",
+    "cadence": "daily",
+    "limit": 1
+  },
+  {
+    "name": "nato",
+    "cadence": "daily",
+    "limit": 1
+  },
+  {
+    "name": "ukraine",
+    "cadence": "daily",
+    "limit": 1
+  },
+  {
+    "name": "worldnews",
+    "cadence": "daily",
+    "limit": 1
+  },
+  {
+    "name": "asknetsec",
+    "cadence": "weekly",
+    "limit": 1
+  },
+  {
+    "name": "infosecnews",
+    "cadence": "weekly",
+    "limit": 1
+  },
+  {
+    "name": "information_security",
+    "cadence": "weekly",
+    "limit": 1
+  },
+  {
+    "name": "infosec",
+    "cadence": "weekly",
+    "limit": 1
+  },
+  {
+    "name": "blueteamsec",
+    "cadence": "weekly",
+    "limit": 1
+  },
+  {
+    "name": "bugbounty",
+    "cadence": "weekly",
+    "limit": 1
+  },
+  {
+    "name": "cybersecurity",
+    "cadence": "weekly",
+    "limit": 1
+  },
+  {
+    "name": "hacking",
+    "cadence": "weekly",
+    "limit": 1
+  },
+  {
+    "name": "netsec",
+    "cadence": "weekly",
+    "limit": 1
+  },
+  {
+    "name": "redteamsec",
+    "cadence": "weekly",
+    "limit": 1
+  },
+  {
+    "name": "OSINT",
+    "cadence": "weekly",
+    "limit": 1
+  },
+  {
+    "name": "EuropeTravel",
+    "cadence": "weekly",
+    "limit": 1
+  },
+  {
+    "name": "TravelHacks",
+    "cadence": "weekly",
+    "limit": 1
+  },
+  {
+    "name": "couchsurfing",
+    "cadence": "weekly",
+    "limit": 1
+  },
+  {
+    "name": "familytravel",
+    "cadence": "weekly",
+    "limit": 1
+  },
+  {
+    "name": "roadtrip",
+    "cadence": "weekly",
+    "limit": 1
+  },
+  {
+    "name": "solotravel",
+    "cadence": "weekly",
+    "limit": 1
+  },
+  {
+    "name": "travel",
+    "cadence": "weekly",
+    "limit": 1
+  },
+  {
+    "name": "travelpartners",
     "cadence": "weekly",
     "limit": 1
   }
