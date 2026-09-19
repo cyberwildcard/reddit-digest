@@ -8,14 +8,19 @@ was confirmed unobtainable; .rss survived the 2026-05-30 shutdown of the
 unauthenticated .json endpoint), and writes a combined feed to docs/feed.xml
 for GitHub Pages to serve.
 
-Deliberately stateless: readers (Feedly etc.) dedupe by entry <id>/GUID, so
-weekly-cadence subreddits can be refetched every run without any local
-"last shown" tracking — a post reappearing in the source feed every day
-until it drops out of the week's top doesn't cause a reader to show it
-more than once.
+Weekly-cadence subreddits are only fetched on WEEKLY_RUN_WEEKDAY (default
+Monday) — not every day. Earlier design fetched them daily too, relying on
+readers deduping by entry GUID to keep them feeling "weekly." That doesn't
+hold up: r/<sub>/top/.rss?t=week is a rolling 7-day window, recalculated on
+every request, and for anything with decent post volume the #1 post can
+change value daily as new posts out-score the current leader — it only
+looks stable for genuinely quiet subreddits. Fetching just once a week is
+the only mechanism that actually guarantees "weekly" behavior regardless of
+how active a given subreddit is.
 """
 from __future__ import annotations
 
+import datetime as dt
 import json
 import sys
 import time
@@ -38,6 +43,7 @@ REQUEST_DELAY_SECONDS = 3
 FEED_URL = "https://cyberwildcard.github.io/reddit-digest/feed.xml"
 
 CADENCE_TO_TIMEFRAME = {"daily": "day", "weekly": "week"}
+WEEKLY_RUN_WEEKDAY = 0  # Monday (datetime.weekday(): Monday=0 .. Sunday=6)
 
 ET.register_namespace("", ATOM_NS)
 ET.register_namespace("media", MEDIA_NS)
@@ -90,15 +96,47 @@ def build_combined_feed(entries: list[ET.Element]) -> ET.Element:
 
 
 def _now_iso() -> str:
-    import datetime as dt
     return dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%S+00:00")
+
+
+def load_existing_entries_by_subreddit() -> dict[str, list[ET.Element]]:
+    """Group entries in the currently-published feed by which subreddit they
+    came from, so a skipped weekly subreddit's last-fetched post can be
+    carried forward instead of vanishing from the feed on non-run days."""
+    if not OUTPUT_PATH.exists():
+        return {}
+    root = ET.fromstring(OUTPUT_PATH.read_bytes())
+    by_sub: dict[str, list[ET.Element]] = {}
+    for entry in root.findall(f"{{{ATOM_NS}}}entry"):
+        category = entry.find(f"{{{ATOM_NS}}}category")
+        label = category.get("term") if category is not None else None
+        if label:
+            by_sub.setdefault(label, []).append(entry)
+    return by_sub
 
 
 def main() -> None:
     config = json.loads(CONFIG_PATH.read_text())
+    existing_by_sub = load_existing_entries_by_subreddit()
+
+    today_weekday = dt.datetime.now(dt.timezone.utc).weekday()
+    is_weekly_run_day = today_weekday == WEEKLY_RUN_WEEKDAY
 
     all_entries: list[ET.Element] = []
-    for i, sub in enumerate(config):
+    to_fetch = []
+    for sub in config:
+        cadence = sub.get("cadence", "daily")
+        if cadence == "weekly" and not is_weekly_run_day:
+            carried = existing_by_sub.get(sub["name"], [])
+            if carried:
+                print(f"r/{sub['name']} (weekly): carrying forward {len(carried)} from last run (not the weekly run day)")
+                all_entries.extend(carried)
+            else:
+                print(f"r/{sub['name']} (weekly): nothing to carry forward yet, will fetch on the next weekly run day")
+            continue
+        to_fetch.append(sub)
+
+    for i, sub in enumerate(to_fetch):
         if i > 0:
             time.sleep(REQUEST_DELAY_SECONDS)
         name = sub["name"]
